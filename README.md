@@ -115,6 +115,7 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'proxmox'
 * `endpoint` URL of the JSON API endpoint of your Proxmox installation
 * `user_name` The name of the Proxmox user that Vagrant should use
 * `password` The password of the above user
+* `connection_opts` The connection options for REST client (e.g. {verify_ssl: false})
 * `vm_id_range` The possible range of machine ids. The smallest free one is chosen for a new machine
 * `vm_name_prefix` An optional string that is prepended before the vm name
 * `vm_type` The virtual machine type, e.g. :openvz , :qemu or :lxc

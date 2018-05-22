@@ -22,6 +22,11 @@ module VagrantPlugins
       # @return [String]
       attr_accessor :password
 
+      # Proxmox server connection options (ex.: ssl_verify: false)
+      #
+      # @return [Hash]
+      attr_accessor :connection_opts
+
       # The virtual machine type, e.g. :openvz or :qemu or :lxc
       #
       # @return [Symbol]
@@ -331,6 +336,7 @@ module VagrantPlugins
         @user_name = UNSET_VALUE
         @password = UNSET_VALUE
         @vm_type = UNSET_VALUE
+        @connection_opts = UNSET_VALUE
         @openvz_os_template = UNSET_VALUE
         @openvz_template_file = UNSET_VALUE
         @replace_openvz_template_file = false
